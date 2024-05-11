@@ -1,0 +1,112 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 2rem;
+  min-height: 100vh;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+}
+body button, body input {
+  outline: 0;
+  border: none;
+  background-color: transparent;
+}
+body img {
+  width: 100%;
+  display: block;
+}
+
+.page {
+  margin: 0 auto;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+.page .page-header-search {
+  border: 3px solid #505050;
+  border-radius: 4rem;
+  padding: 1rem 3rem;
+  margin: 1rem 5rem;
+  position: relative;
+}
+.page .page-header-search .form-control {
+  color: #fff;
+}
+.page .page-header-search .search-list {
+  z-index: 1;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.page .page-header-search .search-list .search-list-item {
+  display: flex;
+  align-items: center;
+  background-color: #0a0a0a;
+  padding: 0.5rem;
+}
+.page .page-header-search .search-list .search-list-item img {
+  width: 50px;
+  margin-right: 1rem;
+}
+.page .page-header-search .search-list .search-list-item p {
+  cursor: pointer;
+}
+.page .page-body {
+  margin-top: 2rem;
+  height: 500px;
+  overflow-y: scroll;
+}
+.page .page-body::-webkit-scrollbar {
+  width: 10px;
+}
+.page .page-body::-webkit-scrollbar-thumb {
+  background-color: #f64445;
+  border-radius: 5px;
+}
+.page .page-body .tab-head-single {
+  position: relative;
+  font-size: 2rem;
+  color: #fff;
+}
+.page .page-body .tab-head-single.active-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.7rem;
+  width: 100%;
+  height: 3px;
+  background-color: #f64445;
+}
+.page .page-body .page-body-content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  -moz-column-gap: 4rem;
+  column-gap: 4rem;
+  margin-right: 2rem;
+}
+.page .page-body .page-body-content .page-body-content-thumbnail {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.page .page-body .page-body-content .page-body-content-list .name {
+  letter-spacing: 2px;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: -1.2rem;
+}
+.page .page-body .biography li {
+  margin: 5rem 10rem;
+}
+.page .page-body .biography li span:first-child {
+  text-transform: capitalize;
+  color: #505050;
+}
+.page .page-body .biography li span:last-child {
+  text-transform: capitalize;
+  margin-left: 3rem;
+}

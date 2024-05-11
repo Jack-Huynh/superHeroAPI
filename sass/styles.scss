@@ -1,0 +1,136 @@
+@import 'color';
+  html {
+    font-size: 10px;
+  }
+  
+  body {
+    font-size: 2rem;
+    min-height: 100vh;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+  
+    button, input {
+      outline: 0;
+      border: none;
+      background-color: transparent;
+    }
+  
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .page {
+    margin: 0 auto;
+    background-color: $dark-color;
+    color: $light-color;
+  
+    .page-header-search {
+      border: 3px solid $grey-color;
+      border-radius: 4rem;
+      padding: 1rem 3rem;
+      margin: 1rem 5rem;
+      position: relative;
+  
+      .form-control {
+        color: $light-color;
+      }
+  
+      .search-list {
+        z-index: 1;
+        position: absolute;
+        background-color: $light-color;
+        width: 100%;
+        max-height: 300px;
+        overflow-y: scroll;
+  
+        .search-list-item {
+          display: flex;
+          align-items: center;
+          background-color: $dark-color;
+          padding: 0.5rem;
+  
+          img {
+            width:50px;
+            margin-right: 1rem;
+          }
+  
+          p {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  
+    .page-body {
+      margin-top: 2rem;
+      height: 500px;
+      overflow-y: scroll;
+  
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background-color: $red-color;
+        border-radius: 5px;
+      }
+  
+      .tab-head-single {
+        position: relative;
+        font-size: 2rem;
+        color: $light-color;
+  
+        &.active-tab::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -1.7rem;
+          width: 100%;
+          height: 3px;
+          background-color: $red-color;
+        }
+      }
+  
+      .page-body-content {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        -moz-column-gap: 4rem;
+        column-gap: 4rem;
+        margin-right: 2rem;
+  
+        .page-body-content-thumbnail {
+          width: 100%;
+          border-radius: 6px;
+          overflow: hidden;
+        }
+  
+        .page-body-content-list {
+          .name {
+            letter-spacing: 2px;
+            font-size: 5rem;
+            font-weight: bold;
+            margin-top: -1.2rem;
+          }
+        }
+      }
+  
+      .biography {
+        li {
+          margin: 5rem 10rem;
+  
+          span:first-child {
+            text-transform: capitalize;
+            color: $grey-color;
+          }
+  
+          span:last-child {
+            text-transform: capitalize;
+            margin-left: 3rem;
+          }
+        }
+      }
+    }
+  }
